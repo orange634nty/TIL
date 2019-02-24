@@ -18,6 +18,15 @@
     - デフォルトだと名前はプロジェクト名で出力
   - `./<実行バイナリ>` で実行可能
 
+### ver0.3更新
+
+- https://qiita.com/orange634nty/items/5bf8c73612a5d3fbc1db/revisions/5
+- https://qiita.com/orange634nty/items/5bf8c73612a5d3fbc1db/revisions/6
+
+ログを ` Microsoft.Extensions.Logging.Console` から `System.Threading.Tasks` に変更  
+個人的にはこっちの方がみやすいので嬉しい  
+その関連で `RunBatchEngine` から `RunBatchEngineAsync` に変更
+
 ### next
 
 - dotnetコマンド周りの理解 -> 別で行う
