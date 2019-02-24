@@ -9,7 +9,7 @@
 
 - `dotnet add package` でパッケージを入れても自動で依存解決してくれないみたい
   - その時は手動で追加した
-- cotnet 2.2 だと、c# のバージョンはデフォルトだと 7.0 なので、自分で指定する必要があり
+- dotnet 2.2 だと、c# のバージョンはデフォルトだと 7.0 なので、自分で指定する必要があり
   - `.csproj` ファイルで `<LangVersion>7.3</LangVersion>` を追加
   - 参考 : [.Net CoreプロジェクトでC#のバージョンを変更する方法](https://qiita.com/shuhey/items/b55c51b555b5120179c4)
 - macで `publish` する際は `runtime` をオプションで指定する
