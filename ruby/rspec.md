@@ -33,3 +33,28 @@ mockなどを使うとDBへのアクセスが減るのでテストが早くな�
 
 - [使えるRSpec入門・その3「ゼロからわかるモック（mock）を使ったテストの書き方」](https://qiita.com/jnchito/items/640f17e124ab263a54dd)
 - [allow、receive、and_return メソッドを使って特定のメソッドをスタブ化する](https://qiita.com/suzuki86/items/5549d5fab231a907642d)
+
+## rspecで使うマッチャー
+
+[使えるRSpec入門・その2「使用頻度の高いマッチャを使いこなす」](https://qiita.com/jnchito/items/2e79a1abe7cd8214caa5)
+
+基本的に`to`や`raise_error`を使う感じでいく。  
+気をつけないと行けない点は、true/falseの判定です。  
+厳密に`true/false`の判定したい時は`be_ture/be_false`を使うのは不適切
+
+というのも`be_ture/be_false`は
+
+```ruby
+expect(1).to be_true
+expect(nil).to be_false
+```
+
+のテストが通ってしまうのです！
+
+```ruby
+expect(true).to be true
+expect(false).to be false
+```
+
+厳密に行うには上記のようにする必要があります。  
+なので基本的には`be_true/be_false`は使わない。
