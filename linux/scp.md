@@ -14,5 +14,14 @@ $ scp -r -P <port> <転送したいフォルダへのパス> <sshの送り先>:<
 
 で作成出来ます。
 
+オプションは
+
+- `-r`：再帰的
+- `-P`：ポート番号
+
+です。
+
+#### 参考
+
 - https://qiita.com/S-T/items/18af2bfcc4e5a72202da
 - https://qiita.com/tommyfms2/items/7d7732c0b681b215d461
