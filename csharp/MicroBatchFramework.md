@@ -31,3 +31,27 @@
 
 - dotnetコマンド周りの理解 -> 別で行う
 - ReadMeもう少し進める
+
+## joの移植
+
+https://qiita.com/gorilla0513/items/e3b0358ffbc0db0a2787
+
+上の記事をみて、自分もMicroBatchFrameworkの勉強用に作ってみたいと思った  
+下のやつが移植してみたやつ
+
+https://github.com/orange634nty/csjo
+
+細かいところは出来てないけど、もう面倒なのでサクッと記事を書いちゃう
+
+MicroBatchFramworkを活かすために、joから仕様を変えている。  
+
+- 配列は`-a`、オブジエクトは`-o`で文字列でしているす
+  - 例えば `-a "hoge foo"` のようにしている
+  - MicroBatchFrameworkだとパラメータはオプションで受け取る作りになってるので
+  - なので`-a`と`-o`は同時に指定できない
+- ヘルプは`-h`ではなく`help`で
+  - MicroBatchFrameworkで組み込まれているデフォルトの`help`表示機能
+
+汎用的なCLI作成ツールではないなと思った  
+それはリポジトリのDescriptionみたらそんな感じな気がした
+
