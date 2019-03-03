@@ -1,5 +1,16 @@
 # MicroBatchFramework
 
+## version更新
+
+### ver0.3
+
+- logger周りが変わってたポイ
+
+### ver0.4
+
+- オプションなしで引数が使えるようになった
+- マルチコマンド対応 `hoge foo` みたいなの
+
 ## 使ってみた
 
 - Qiita : https://qiita.com/orange634nty/items/5bf8c73612a5d3fbc1db
