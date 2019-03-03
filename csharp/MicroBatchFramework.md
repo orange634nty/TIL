@@ -43,8 +43,8 @@ https://qiita.com/gorilla0513/items/e3b0358ffbc0db0a2787
 上の記事をみて、自分もMicroBatchFrameworkの勉強用に作ってみたいと思った  
 下のやつが移植してみたやつ
 
-Qiita : https://qiita.com/orange634nty/items/2626fefc5724f3b83bee
-Github : https://github.com/orange634nty/csjo
+- Qiita : https://qiita.com/orange634nty/items/2626fefc5724f3b83bee
+- Github : https://github.com/orange634nty/csjo
 
 細かいところは出来てないけど、もう面倒なのでサクッと記事を書いちゃう
 
@@ -60,6 +60,6 @@ MicroBatchFramworkを活かすために、joから仕様を変えている。
 汎用的なCLI作成ツールではないなと思った  
 それはリポジトリのDescriptionみたらそんな感じな気がした
 
--> ver0.4からは引数なしでコマンドを受けれるようにしたみたい
-その他cliツールぽい作りになったぽい
+-> ver0.4からは引数なしでコマンドを受けれるようにしたみたい  
+その他cliツールぽい作りになったぽい  
 後で修正対応する予定
