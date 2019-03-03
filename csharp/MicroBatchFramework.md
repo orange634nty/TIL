@@ -67,7 +67,7 @@ MicroBatchFramworkを活かすために、joから仕様を変えている。
   - なので`-a`と`-o`は同時に指定できない
 - ヘルプは`-h`ではなく`help`で
   - MicroBatchFrameworkで組み込まれているデフォルトの`help`表示機能
-- `dotnet run` で `-p` や `-v` オプションは被るぽいので使えない？注意が必要
+- `dotnet run` で `-p` や `-v` オプションは `dotnet cli` と被るぽいので使えない？注意が必要
 
 汎用的なCLI作成ツールではないなと思った  
 それはリポジトリのDescriptionみたらそんな感じな気がした
