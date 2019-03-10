@@ -7,3 +7,6 @@ SE Linux
 https://blog.fenrir-inc.com/jp/2016/09/selinux.html
 
 ちょっとわかった
+
+これ読むといいらしい  
+https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/
