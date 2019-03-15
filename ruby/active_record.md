@@ -20,4 +20,10 @@ end
 
 参考：[Active Record の関連付け (アソシエーション)](https://railsguides.jp/association_basics.html)
 
+## rake db:migrateで、uninitialized constant hogehoge
 
+参考 : [xengineer’s diary - rake db:migrateで、uninitialized constant hogehoge](http://xengineer.hatenablog.com/entry/2014/12/08/_rake_db%3Amigrate%E3%81%A7%E3%80%81uninitialized_constant_hogehoge)
+
+上記と全く同じ問題にぶち当たりました。  
+ファイル名とクラス名が一致しないとダメよということ。  
+私の場合はクラス名もファイル名もどちらも間違ってたという…
