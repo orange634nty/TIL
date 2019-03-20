@@ -22,3 +22,13 @@ tail -f <hoge> | grep --line-buffered <boo>
 
 ```
 tail -F ./path/to/log | sed -E 's/(error)/\o033[32m\1\o033[39m/g'
+```
+
+- `\033[32m` : 緑
+- `\033[39m` : ？
+
+他にもこういうツールを入れる手があるみたい
+
+[linux(CentOS)のコマンドに色付け#tail -f コマンドに色をつける](https://qiita.com/ironsand/items/b308b3c689d69b94bae5#tail--f-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AB%E8%89%B2%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B)
+
+> `sudo yum install multitail`
