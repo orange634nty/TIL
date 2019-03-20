@@ -3,7 +3,7 @@ grep
 
 ## `tail -f` を `grep` する
 
-https://qiita.com/naotarou/items/ee2afc15804e37129c2d
+[リアルタイムに「tail -f」をgrepする方法](https://qiita.com/naotarou/items/ee2afc15804e37129c2d)
 
 ログ見る時にgrepしたいと思ったので探したらあった
 
