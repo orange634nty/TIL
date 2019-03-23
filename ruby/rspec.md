@@ -1,6 +1,8 @@
 rspec
 ---
 
+＊ここのテスト周りのサンプルコードは自分で書いたものを使ったほうが良さそう
+
 ## mockの使い方
 
 ```ruby
@@ -85,3 +87,72 @@ expect(false).to be false
 
 厳密に行うには上記のようにする必要があります。  
 なので基本的には`be_true/be_false`は使わない。
+
+## Factory_bot
+
+元々は `FactoryGirl` という名前だった。  
+なので、情報を調べるときは `FactoryGirl` でも調べた方がいいかも。
+
+### 簡単な使い方
+
+```ruby
+describe Staffs, :type => :request do
+  describe "GET index" do
+    it 'スタッフデータ取得出来ている' do
+      result = Staffs.find
+      expect(result.id).to eq staff.id
+    end
+  end
+end
+```
+
+こんな感じのテストを考える時、 `Staff` を `Factory_bot` でテストデータを作成する場合を考えます。  
+まず、事前に `FactoryBot.define` でテストデータを定義しておきます。  
+これは `spec/factories.rb` に定義します。
+
+```ruby
+FactoryBot.define do
+  factory :staff do
+    staff_last_name  "名字"
+    staff_first_name "名前"
+    staff_short_name "名字"
+  end
+end
+```
+
+次に先程のテストにテストデータを生成しましょう。
+
+```ruby
+describe Staffs, :type => :request do
+  describe "GET index" do
+    let!(:staff) { FactoryBot.create :staff } # <- 追記
+
+    it 'スタッフデータ取得出来ている' do
+      result = Staffs.find
+      expect(result.id).to eq staff.id
+    end
+  end
+end
+```
+
+`before` ブロックでもいいですが、私は `let!` を好んでよく使います。  
+カラムの上書きも可能です（確か）
+
+
+```ruby
+describe Staffs, :type => :request do
+  describe "GET index" do
+    let!(:staff) { FactoryBot.create :staff, staff_short_name: "あだ名"} # <- 追記
+
+    it 'スタッフデータ取得出来ている' do
+      result = Staffs.find
+      expect(result.id).to eq staff.id
+    end
+  end
+end
+```
+
+##### 参考
+
+- [RSpec + Factory_botでテストする方法](https://qiita.com/kkkkkkkkkk1005/items/9c957c38302eed8a5611)
+- [Rails + RSpec で FactoryBot（旧 FactoryGirl）を使う](http://yurafuca.hatenablog.com/entry/2018/06/28/190842)
