@@ -52,7 +52,7 @@ require_relative "japan.rb"
 describe "Japan.get_capital" do
   it "returns Saitama" do
     allow(Japan).to receive(:get_capital).and_return("Saitama") 
-    expect(japan.get_capital).to eq("Saitama")
+    expect(Japan.get_capital).to eq("Saitama")
   end
 end
 ```
