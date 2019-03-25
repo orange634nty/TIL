@@ -45,3 +45,16 @@ end
 ```
 
 チェックだけするなら`exists?` の方がよい、チェックしたあとにその結果を利用するなら`.first.present?` の方がよさそう
+
+## default_scopeについて
+
+`default_scope` というメソッドがある
+
+http://railsdoc.com/references/default_scope
+
+要はデフォルトでカラムのshow/hideのコントロールが出来る機能みたい  
+意図しない制限をかけてしまったり、unscoped使うと意図しないクエリが出来てしまう可能性があるので、嫌われているみたい
+
+https://techracho.bpsinc.jp/hachi8833/2017_10_31/47302
+
+上の `scope` を使った方法がよさそうな気がするけどもう少し使ってみないとわからない
