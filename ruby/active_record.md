@@ -33,5 +33,15 @@ end
 [railsのARに対するpresent?とexists?のパフォーマンスの差](http://mikamisan.hatenablog.com/entry/2017/09/26/223137)
 
 なので、`exists?` の方がよさそう
-ただ、`present?` の方は `.first` つければ同じクエリにはなりそう…
-チェックだけするなら`exists?` の方がスッキリ、チェックしたあとにその結果を利用するなら`.first.present?` の方がよさそう
+ただ、`present?` の方は `.first` つければ `limit 1` にはなる
+記事では触れていないが`as one`の部分も速さの恩恵ありそう
+↓手元の環境で確認してみた
+
+```
+> Work.where(id: [*1..10]).exists?
+(1.7ms) SELECT 1 AS one FROM `works` WHERE `works`.`id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) LIMIT 1
+> Work.where(id: [*1..10]).first
+(2.5ms) SELECT `chars`.* FROM `works` WHERE `works`.`id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) LIMIT 1
+```
+
+チェックだけするなら`exists?` の方がよい、チェックしたあとにその結果を利用するなら`.first.present?` の方がよさそう
