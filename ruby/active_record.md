@@ -41,7 +41,7 @@ end
 > Work.where(id: [*1..10]).exists?
 (1.7ms) SELECT 1 AS one FROM `works` WHERE `works`.`id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) LIMIT 1
 > Work.where(id: [*1..10]).first
-(2.5ms) SELECT `chars`.* FROM `works` WHERE `works`.`id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) LIMIT 1
+(2.5ms) SELECT `works`.* FROM `works` WHERE `works`.`id` IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) LIMIT 1
 ```
 
 チェックだけするなら`exists?` の方がよい、チェックしたあとにその結果を利用するなら`.first.present?` の方がよさそう
