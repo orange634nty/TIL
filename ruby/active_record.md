@@ -32,9 +32,9 @@ end
 
 [railsのARに対するpresent?とexists?のパフォーマンスの差](http://mikamisan.hatenablog.com/entry/2017/09/26/223137)
 
-なので、`exists?` の方がよさそう
-ただ、`present?` の方は `.first` つければ `limit 1` にはなる
-記事では触れていないが`as one`の部分も速さの恩恵ありそう
+なので、`exists?` の方がよさそう  
+ただ、`present?` の方は `.first` つければ `limit 1` にはなる  
+記事では触れていないが`as one`の部分も速さの恩恵ありそう  
 ↓手元の環境で確認してみた
 
 ```
