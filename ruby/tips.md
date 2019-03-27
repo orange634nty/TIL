@@ -29,7 +29,7 @@ options = { size: 25, velocity: 10 }.merge(options)
 
 ## `Time.mday` と `Time.day` について
 
-どちらも同じみたい
+どちらも同じみたい  
 他のメソッドの説明等では `mday` を使ってるので、 `mday` 使った方がいいように思う
 
 参考：https://docs.ruby-lang.org/ja/latest/class/Time.html#I_DAY
