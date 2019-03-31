@@ -9,7 +9,7 @@ VRM: https://dwango.github.io/vrm/
 
 完成したらこんな感じ  
 https://twitter.com/orange634nty/status/1112285426293706754  
-<画像は後で貼る>
+![/vroid-vrm-2](./images/vroid-vrm-2.png)
 
 主にこれを参考
 
@@ -18,7 +18,7 @@ https://twitter.com/orange634nty/status/1112285426293706754
 モデルはこれを使います
 
 https://twitter.com/orange634nty/status/1112228133745258496  
-<画像は後で貼る>
+![/vroid-vrm-1](./images/vroid-vrm-1.png)
 
 記事のやり方といくつか変えていて
 
