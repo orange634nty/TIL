@@ -58,3 +58,16 @@ http://railsdoc.com/references/default_scope
 https://techracho.bpsinc.jp/hachi8833/2017_10_31/47302
 
 上の `scope` を使った方法がよさそうな気がするけどもう少し使ってみないとわからない
+
+## マイグレーションの integer の :limit はバイト数を表している
+
+例えば bigint(20) を使いたい場合は
+
+```ruby
+t.integer :user_id, limit: 8
+```
+
+とする必要がある
+
+https://qiita.com/YumaInaura/items/795aae1cce4e28195907
+
