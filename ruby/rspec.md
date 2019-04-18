@@ -156,3 +156,10 @@ end
 
 - [RSpec + Factory_botでテストする方法](https://qiita.com/kkkkkkkkkk1005/items/9c957c38302eed8a5611)
 - [Rails + RSpec で FactoryBot（旧 FactoryGirl）を使う](http://yurafuca.hatenablog.com/entry/2018/06/28/190842)
+
+### 同一の内容のテストを行う場合は shared_examples_for を使うといい
+
+条件が複数あって、出し分けがある場合はこれ使ったら楽
+
+https://qiita.com/etet-etet/items/7babe4856a1cd62b9ecb
+
