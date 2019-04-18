@@ -33,3 +33,7 @@ options = { size: 25, velocity: 10 }.merge(options)
 他のメソッドの説明等では `mday` を使ってるので、 `mday` 使った方がいいように思う
 
 参考：https://docs.ruby-lang.org/ja/latest/class/Time.html#I_DAY
+
+## セッターメソッドを呼ぶ時はselfを省略出来ない
+
+参考：https://qiita.com/akira-hamada/items/4132d2fda7e420073ab7
