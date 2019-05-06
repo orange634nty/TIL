@@ -28,3 +28,26 @@ Console.Writeline(basePathUri.MakeRelativeUri(filePathUri).ToString());
 
 文字列から判定するのはOS依存操作なのでよくない。  
 例えば linux なら先頭が `/` で絶対パスか判定可能だが、Windowsの場合は `C:\\` や `D:\\` になるので正常に動作しない。  
+
+## Path色々
+
+https://dobon.net/vb/dotnet/file/pathclass.html
+
+```csharp
+string path = "/path/to/file/index.html";
+
+//ディレクトリ名の取得
+Console.WriteLine(Path.GetDirectoryName(path)); // => /path/to/file
+
+//拡張子の取得
+Console.WriteLine(Path.GetExtension(path)); // => .html
+
+//ファイル名の取得
+Console.WriteLine(Path.GetFileName(path));  // => index.html
+
+//ファイル名（拡張子なし）の取得
+Console.WriteLine(Path.GetFileNameWithoutExtension(path)); // => index
+
+//ルートディレクトリ名の取得
+Console.WriteLine(Path.GetPathRoot(path)); // => /
+```
