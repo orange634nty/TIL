@@ -9,3 +9,11 @@ https://www.labohyt.net/blog/microsoft/post-2532/
 
 バイナリを落として来て、パスが通ってるところに置くだけぽいが上手くいかない…  
 これは素直に `go get` で入れてビルドするほうがバージョンアップできるからいいかもしれない
+
+## フルパスの取得
+
+```
+readlink -f index.html
+```
+
+ただしmacでは使えない…
