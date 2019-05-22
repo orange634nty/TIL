@@ -23,6 +23,8 @@ git reset HEAD <取り除きたいファイル名>
 
 ## コンフリクトしたから取り消したい
 
+[【git】マージしたけどやっぱりやめたい時のやり方4種類](https://qiita.com/chihiro/items/5dd671aa6f1c332986a7)
+
 コンフリクト修正するのをやめたい時
 
 ```
@@ -30,5 +32,3 @@ git merge --abort
 ```
 
 他にも場合によって様々だけど自分は上のパターンが多い
-
-参考：https://qiita.com/chihiro/items/5dd671aa6f1c332986a7
