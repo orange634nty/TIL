@@ -20,3 +20,15 @@ git branch -m <新しいブランチ名>
 ```
 git reset HEAD <取り除きたいファイル名>
 ```
+
+## コンフリクトしたから取り消したい
+
+コンフリクト修正するのをやめたい時
+
+```
+git merge --abort
+```
+
+他にも場合によって様々だけど自分は上のパターンが多い
+
+参考：https://qiita.com/chihiro/items/5dd671aa6f1c332986a7
