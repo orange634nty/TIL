@@ -63,6 +63,16 @@ end
 
 [Rspec で クラスメソッドのスタブを作る方法](https://qiita.com/Yinaura/items/dfc09fd6d4b953181e2d)
 
+## インスタンス化したクラス全てに対してmockを使う
+
+複数のインスタンスが生成されたり、実行中に生成されるインスタンスに対してmockを使いたい場合は `allow_any_instance_of` が使えます
+
+**が**、公式のドキュメントでは使用を避けるようにと記載されています…
+
+https://relishapp.com/rspec/rspec-mocks/v/3-1/docs/working-with-legacy-code/any-instance
+
+自分も今後使うの避けようかなと思います…
+
 ## rspecで使うマッチャー
 
 [使えるRSpec入門・その2「使用頻度の高いマッチャを使いこなす」](https://qiita.com/jnchito/items/2e79a1abe7cd8214caa5)
