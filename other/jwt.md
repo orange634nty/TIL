@@ -30,6 +30,8 @@ https://ja.wikipedia.org/wiki/%E5%85%AC%E9%96%8B%E9%8D%B5%E6%9A%97%E5%8F%B7
 - https://qiita.com/mitswku/items/9f479765dbc8ec043f56
 - https://qiita.com/QUANON/items/e7b181dd08f2f0b4fdbe
 - http://quanon.hateblo.jp/entry/2015/03/26/205949
+- http://quanon.hateblo.jp/entry/2015/03/31/002152
+- http://quanon.hateblo.jp/entry/2015/05/20/221721
 
 別記事にするかも  
 数学的なところは書籍を当たる方がよさそう
