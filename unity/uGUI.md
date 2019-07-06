@@ -36,3 +36,9 @@ https://docs.unity3d.com/ja/2018.3/ScriptReference/EventSystems.BaseEventData.ht
 ### サンプル
 
 https://github.com/orange634nty/UnityDragAndDrop
+
+## タップした位置にuGUI表示
+
+http://ghoul-life.hatenablog.com/entry/2018/11/13/000955
+
+Staticな位置はUGUIでは使いやすいが、こういう動的な場合はどうするかわからなかったのでメモ
