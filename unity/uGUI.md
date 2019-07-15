@@ -42,3 +42,13 @@ https://github.com/orange634nty/UnityDragAndDrop
 http://ghoul-life.hatenablog.com/entry/2018/11/13/000955
 
 Staticな位置はUGUIでは使いやすいが、こういう動的な場合はどうするかわからなかったのでメモ
+
+## Canvas内でImageをInstantiateするときの注意
+
+https://qiita.com/tibe/items/5e1ae977c31cdbec1e60
+
+```csharp
+prefab.transform.SetParent(canvas.transform, false);
+```
+
+`false` にしないとダメ
