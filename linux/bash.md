@@ -68,7 +68,7 @@ $ sed -e '1d' hoge.csv | awk -F"," '{print $1","$2","$3*2}'
 
 名前にサフィックスをつけたい場合は
 
-```
+```console
 $ sed -e '1d' hoge.csv | awk -F"," '{print $1","$2"-hoge,"$3}'
 1,apple-hoge,100
 2,orange-hoge,150
@@ -80,7 +80,7 @@ $ sed -e '1d' hoge.csv | awk -F"," '{print $1","$2"-hoge,"$3}'
 
 costの最大・最小・合計・平均をawkを使って求めます
 
-```
+```console
 # 最大
 $ sed -e '1d' hoge.csv | awk -F"," '{if(m<$3) m=$3} END{print m}'
 200
