@@ -122,7 +122,7 @@ cost 120 : 3 items
 |:---|:---|
 | `sed -e '1d' cost_list.csv` | 行頭のカラム削除 |
 | `awk -F"," '{print $2}'` | costだけ抜き出す |
-| `sort \| uniq -c` | `uniq -c` で数を数えます<br /> `uniq` を使う際は先に `sort` する必要があるので `sort` しています |
+| `sort \| uniq -c` | `uniq -c` で数を数えます<br /> `uniq` を使う際は先に `sort` する必要があるので `sort` しています<br />sortを使わない場合は連続した行しかuniqとして判定出来ないので、離れている行は正しく重複判定が出来ない |
 | `sort -n -k 1` | 見やすさの為に個数で降順に並び替えてます<br />参考：https://qiita.com/d-dai/items/b261fc8483d0cdeccb58 | 
 | `awk '{print "cost "$2" : "$1" items"}'` | 見やすさの為にawkで出力を調整しています |
 
