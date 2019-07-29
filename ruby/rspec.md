@@ -173,3 +173,23 @@ end
 
 https://qiita.com/etet-etet/items/7babe4856a1cd62b9ecb
 
+## timecop
+
+https://qiita.com/tyamagu2/items/5f8dddfe079064b64d5e
+
+rspecで時間関連を扱い場合に `timecop` を使うと、非常に簡単に時間を操作できます。
+
+基本的に時間を止める `freeze` と、止めた時間を再び動かす `return` を使います。
+
+```ruby:例
+describe "sample test" do
+  before do { Timecop.freeze(Time.now) } # 現在時刻で時間を止める
+  after do { Timecop.return }
+  it "check something" do
+    # なんかする
+  end
+end
+```
+
+- Github：[travisjeffery/timecop](https://github.com/travisjeffery/timecop)
+- 参考：[timecop 使ってみた](https://qiita.com/tyamagu2/items/5f8dddfe079064b64d5e)
