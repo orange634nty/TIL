@@ -52,6 +52,8 @@ apple,orange,grape,pinapple
 - `tr '\n' ','` ： 改行を `,` に置き換える
 - `sed s/,$//g` ： 最後の `,` を消す
 
+参考：https://qiita.com/piroor/items/55ff672cb9f8e375e659
+
 ## 特定の行を計算して出力する
 
 
