@@ -56,4 +56,43 @@ apple,orange,grape,pinapple
 
 ## 特定の行を計算して出力する
 
+例えばcostを二倍にしたものを出力したい場合は
 
+```console
+$ sed -e '1d' hoge.csv | awk -F"," '{print $1","$2","$3*2}'
+1,apple,200
+2,orange,300
+3,grape,400
+4,pinapple,240
+```
+
+名前にサフィックスをつけたい場合は
+
+```
+$ sed -e '1d' hoge.csv | awk -F"," '{print $1","$2"-hoge,"$3}'
+1,apple-hoge,100
+2,orange-hoge,150
+3,grape-hoge,200
+4,pinapple-hoge,120
+```
+
+## 特定の行の最大・最小・合計・平均を求める
+
+costの最大・最小・合計・平均をawkを使って求めます
+
+```
+# 最大
+$ sed -e '1d' hoge.csv | awk -F"," '{if(m<$3) m=$3} END{print m}'
+200
+# 最小
+$ sed -e '1d' hoge.csv | awk -F"," 'BEGIN{m=100000}{if(m>$3) m=$3} END{print m}'
+100
+# 合計
+$ sed -e '1d' hoge.csv | awk -F"," '{m+=$3} END{print m;}'
+570
+# 平均
+$ sed -e '1d' hoge.csv | awk -F"," '{m+=$3} END{print m/NR;}'
+142.5
+```
+
+参考：http://leetmikeal.hatenablog.com/entry/20130117/1358423717
