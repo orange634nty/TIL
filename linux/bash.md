@@ -54,7 +54,7 @@ apple,orange,grape,pinapple
 
 参考：https://qiita.com/piroor/items/55ff672cb9f8e375e659
 
-## 特定の行を計算して出力する
+### 特定の行を計算して出力する
 
 例えばcostを二倍にしたものを出力したい場合は
 
@@ -76,7 +76,7 @@ $ sed -e '1d' hoge.csv | awk -F"," '{print $1","$2"-hoge,"$3}'
 4,pinapple-hoge,120
 ```
 
-## 特定の行の最大・最小・合計・平均を求める
+### 特定の行の最大・最小・合計・平均を求める
 
 costの最大・最小・合計・平均をawkを使って求めます
 
@@ -96,3 +96,34 @@ $ sed -e '1d' hoge.csv | awk -F"," '{m+=$3} END{print m/NR;}'
 ```
 
 参考：http://leetmikeal.hatenablog.com/entry/20130117/1358423717
+
+## 同じ行をカウントする
+
+```csv:cost_list.csv
+name,cost
+orange,100
+apple,120
+pinapple,150
+grape,100
+strawberry,120
+cherry,120
+```
+
+の時、同じコストがどれくらいあるか調査する
+
+```console
+$ sed -e '1d' cost_list.csv | awk -F"," '{print $2}' | sort | uniq -c | sort -n -k 1 | awk '{print "cost "$2" : "$1" items"}'
+cost 150 : 1 items
+cost 100 : 2 items
+cost 120 : 3 items
+```
+
+| コマンド | 説明 |
+|:---|:---|
+| `sed -e '1d' cost_list.csv` | 行頭のカラム削除 |
+| `awk -F"," '{print $2}'` | costだけ抜き出す |
+| `sort \| uniq -c` | `uniq -c` で数を数えます<br /> `uniq` を使う際は先に `sort` する必要があるので `sort` しています |
+| `sort -n -k 1` | 見やすさの為に個数で降順に並び替えてます<br />参考：https://qiita.com/d-dai/items/b261fc8483d0cdeccb58 | 
+| `awk '{print "cost "$2" : "$1" items"}'` | 見やすさの為にawkで出力を調整しています |
+
+
