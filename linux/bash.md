@@ -28,6 +28,20 @@ $ sed -e '1d' hoge.csv
 
 参考：https://it-ojisan.tokyo/sed-d-command/
 
+逆に行頭を追加したい場合は以下のような方法で可能  
+ただ、パイプラインだと出来ないので、やり方を要調査する
+
+```
+$ sed -e '1s/^/hoge\n/' hoge.csv
+hogenid,name,cost
+1,apple,100
+2,orange,150
+3,grape,200
+4,pinapple,120
+```
+
+参考：https://qiita.com/U_ikki/items/b86ce318cb7c086bb6c1
+
 ### 特定の行だけ抜き出したい
 
 nameの一覧を作りたい時
@@ -122,7 +136,7 @@ cost 120 : 3 items
 |:---|:---|
 | `sed -e '1d' cost_list.csv` | 行頭のカラム削除 |
 | `awk -F"," '{print $2}'` | costだけ抜き出す |
-| `sort \| uniq -c` | `uniq -c` で数を数えます<br /> `uniq` を使う際は先に `sort` する必要があるので `sort` しています<br />sortを使わない場合は連続した行しかuniqとして判定出来ないので、離れている行は正しく重複判定が出来ない |
+| `sort \| uniq -c` | `uniq -c` で数を数えます<br /> `uniq` を使う際は先に `sort` する必要があるので `sort` しています<br />sortを使わない場合は連続した行しかuniqとして判定出来ないので、離れている行は正しく重複判定が出来ない<br />参考：https://www.soum.co.jp/misc/awk/3/ |
 | `sort -n -k 1` | 見やすさの為に個数で降順に並び替えてます<br />参考：https://qiita.com/d-dai/items/b261fc8483d0cdeccb58 | 
 | `awk '{print "cost "$2" : "$1" items"}'` | 見やすさの為にawkで出力を調整しています |
 
