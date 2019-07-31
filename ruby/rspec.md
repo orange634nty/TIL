@@ -211,3 +211,5 @@ factory :user_account do
   end
 end
 ```
+
+参考：[FactoryGirlのtransientとtraitを活用する](https://qiita.com/joker1007/items/da63b8630351c1f3fe1d)
