@@ -193,3 +193,21 @@ end
 
 - Github：[travisjeffery/timecop](https://github.com/travisjeffery/timecop)
 - 参考：[timecop 使ってみた](https://qiita.com/tyamagu2/items/5f8dddfe079064b64d5e)
+
+## FactoryBotのtransient
+
+transientはデータと関連しないアトリビュートを定義出来ます。  
+例えば、付随するデータを作る、作らないみたいな分岐が出来ます。
+
+```ruby
+factory :user_account do
+  transient do
+    with_diary true
+  end
+  
+  after(:create) do |user_account, evaluator|
+    next unless user_account.with_diary
+    # dairy情報を作成
+  end
+end
+```
