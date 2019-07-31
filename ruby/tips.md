@@ -38,7 +38,7 @@ options = { size: 25, velocity: 10 }.merge(options)
 
 参考：https://qiita.com/akira-hamada/items/4132d2fda7e420073ab7
 
-## ` について
+## <code>`</code> について
 
 コマンドとして実行されるようです
 
