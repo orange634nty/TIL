@@ -37,3 +37,13 @@ options = { size: 25, velocity: 10 }.merge(options)
 ## セッターメソッドを呼ぶ時はselfを省略出来ない
 
 参考：https://qiita.com/akira-hamada/items/4132d2fda7e420073ab7
+
+## ` について
+
+コマンドとして実行されるようです
+
+詳細は
+https://docs.ruby-lang.org/ja/latest/doc/spec=2fliteral.html
+の「コマンド出力」を参照
+
+バックスラッシュ記法や式展開にも対応しています。 
