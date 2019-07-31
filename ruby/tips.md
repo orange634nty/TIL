@@ -3,7 +3,7 @@ ruby tips
 
 ## ActiveSupport
 
-ActiveSupportでは`slice`や`except`、`compact`、` reverse_merge`が使えるようになる
+ActiveSupportでは `slice` や `except` 、 `compact` 、 `reverse_merge` が使えるようになる
 
 ```ruby
 some_hash = {
