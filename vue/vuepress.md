@@ -37,4 +37,11 @@ https://vuepress.vuejs.org/guide/custom-themes.html#site-and-page-metadata
 
 あんまり公式ドキュメントに書かれてないカスタマイズについて書かれていて役にたった
 
+## Netlify CNS
 
+ちょっとずつだがVuepressと合わせて使えないか実験中
+
+公式：https://www.netlifycms.org/
+
+カスタムプレビュー：https://www.netlifycms.org/docs/customization/
+プレビューの確認もできるみたい：https://www.netlifycms.org/docs/deploy-preview-links/
