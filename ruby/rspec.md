@@ -213,3 +213,12 @@ end
 ```
 
 参考：[FactoryGirlのtransientとtraitを活用する](https://qiita.com/joker1007/items/da63b8630351c1f3fe1d)
+
+## FactoryBotのbuildとcreateの違い
+
+- build : メソッドはインスタンスをメモリ上にのみ記録する。
+- create : メソッドはテストデータベースにも保存して、データを永続化させる。
+
+イメージ的には Model.new は build、Model.create は create の関係である。
+
+参考：[FactoryGirl: build と createの違い](http://tkymtk.hatenablog.com/entry/2013/12/15/214420)
