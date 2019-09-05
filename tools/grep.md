@@ -19,7 +19,7 @@ tail -f XXXXX | grep --line-buffered "YYYY"
 
 ## gzファイルをgrepしたい
 
-過去のログファイルはgzに圧縮されることが多い
+過去のログファイルはgzに圧縮されることが多い  
 grepするには `zgrep` を使えば出来る
 
 ```
