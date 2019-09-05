@@ -16,3 +16,14 @@ grep -e bar -e foo
 ```
 tail -f XXXXX | grep --line-buffered "YYYY"
 ```
+
+## gzファイルをgrepしたい
+
+過去のログファイルはgzに圧縮されることが多い
+grepするには `zgrep` を使えば出来る
+
+```
+zgrep "key_word" kako.log.gz
+```
+
+参考：[Qiita - gzのファイルを展開せずにgrepする]https://qiita.com/CTFman/items/7b56b2f5c3073f8f6b19
