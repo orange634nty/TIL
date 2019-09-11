@@ -47,3 +47,25 @@ https://docs.ruby-lang.org/ja/latest/doc/spec=2fliteral.html
 の「コマンド出力」を参照
 
 バックスラッシュ記法や式展開にも対応しています。 
+
+## rubyのhashのarrayで特定のkeyの配列を取得する
+
+つまり
+
+```ruby
+> hoge = [{a: 1, b: 2}, {a: 21, b: 22},{a: 11, b: 12}]
+=> [{:a=>1, :b=>2}, {:a=>21, :b=>22}, {:a=>11, :b=>12}]
+> hoge.map{ |h| h[:a] }
+=> [1, 21, 11]
+```
+
+これはこんなふうにもかける
+
+```ruby
+> hoge.each_with_object(:a).map(&:[])
+=> [1, 21, 11]
+```
+
+あんまり変わらないか…
+
+参考：[第３弾！知って得する12のRubyのトリビアな記法](http://melborne.github.io/2012/04/26/ruby-trivias-you-should-know/)
