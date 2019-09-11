@@ -15,7 +15,7 @@ uGUI
 どちらの場合でもイベントが発火したときは `EventSystems.PointerEventData` を受け取ることになります。  
 https://docs.unity3d.com/ja/2018.3/ScriptReference/EventSystems.PointerEventData.html
 
-(EventTriggerの時は `EventSystem.BaseEventData` で来るので、キャストする必要があります)
+(EventTriggerの時は `EventSystem.BaseEventData` で来るので、キャストする必要があります)  
 https://docs.unity3d.com/ja/2018.3/ScriptReference/EventSystems.BaseEventData.html
 
 今回の場合はドラッグ時のPointerの移動差分の取得とドラッグしているGameObjectを取得するのに使いました。
