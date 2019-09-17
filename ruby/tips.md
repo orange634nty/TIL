@@ -69,3 +69,15 @@ https://docs.ruby-lang.org/ja/latest/doc/spec=2fliteral.html
 あんまり変わらないか…
 
 参考：[第３弾！知って得する12のRubyのトリビアな記法](http://melborne.github.io/2012/04/26/ruby-trivias-you-should-know/)
+
+## try と &.
+
+try : メソッドを呼び出せる時に呼び出す  
+&. : nil 出ない時に呼び出す
+
+```ruby
+foo.try(:hoge) # => nil
+foo&.hoge # => error
+```
+
+参考：[Ruby の &. と #try の違い](http://secret-garden.hatenablog.com/entry/2016/09/02/000000)
