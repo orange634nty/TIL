@@ -32,3 +32,19 @@ git merge --abort
 ```
 
 他にも場合によって様々だけど自分は上のパターンが多い
+
+## マージする
+
+`branch-a` に `branch-b` をマージする
+
+```
+git checkout branch-a # <- マージ先に切り替える
+git merge --no-ff branch-b # <- マージしたいブランチを入れる
+# コンフリクトがある場合は直してaddしてcommit
+```
+
+## gitの追跡
+
+`push`するときに`-u`オプションをつけると追跡する。
+
+参考 : [ブランチを指定して git push する方法](
