@@ -150,11 +150,11 @@ end
 
 
 ```ruby
-describe Staffs, :type => :request do
+describe Staffs, type: :request do
   describe "GET index" do
     let!(:staff) { FactoryBot.create :staff, staff_short_name: "あだ名"} # <- 追記
 
-    it 'スタッフデータ取得出来ている' do
+    it "スタッフデータ取得出来ている" do
       result = Staffs.find
       expect(result.id).to eq staff.id
     end
@@ -169,9 +169,23 @@ end
 
 ### 同一の内容のテストを行う場合は shared_examples_for を使うといい
 
-条件が複数あって、出し分けがある場合はこれ使ったら楽
-
+条件が複数あって、出し分けがある場合はこれ使ったら楽  
 https://qiita.com/etet-etet/items/7babe4856a1cd62b9ecb
+
+```ruby
+shared_examples 'Message send check' do
+  # it ...
+  # it ...
+end
+
+describe 'hoge hoge' do
+  subject { hogehoge(foo) }
+  it_behaves_like 'Message send check'
+end
+```
+
+みたいなことが出来ます  
+引数も渡せます
 
 ## timecop
 
@@ -183,7 +197,8 @@ rspecで時間関連を扱い場合に `timecop` を使うと、非常に簡単�
 
 ```ruby:例
 describe "sample test" do
-  before do { Timecop.freeze(Time.now) } # 現在時刻で時間を止める
+  let!(:now) { Time.now } # now にしておくとnowをit等で使えるので色々便利
+  before do { Timecop.freeze(now) } # 現在時刻で時間を止める
   after do { Timecop.return }
   it "check something" do
     # なんかする
