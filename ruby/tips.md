@@ -97,5 +97,92 @@ Time.now.between?(yesterday, nil)
 
 は`ArgumentError`が発生する
 
+## 再代入
 
+値があったらその値を返して、ない場合は値を算出して返すのような時
 
+```ruby
+def get_param
+  return @param if @param
+  @param = DB.get_param
+end
+```
+
+みたいにするより、
+
+```ruby
+def get_param
+  @param ||= DB.get_param
+end
+```
+
+`||=` を使った方が完結でわかりやすい
+
+## `||`の挙動
+
+rubyでは`||`は前の評価、後ろの評価の順で評価を行って、trueならその値を返すみたいです。
+
+```
+irb(main):001:0> a = 1
+=> 1
+irb(main):002:0> b = 2
+=> 2
+irb(main):003:0> a || b
+=> 1
+irb(main):004:0> b || a
+=> 2
+irb(main):005:0> c = nil
+=> nil
+irb(main):006:0> c || a
+=> 1
+irb(main):007:0> c || nil
+=> nil
+irb(main):008:0> c || false
+=> false
+```
+
+なので、もし◯◯◯ならA、違うならBみたいな、デフォルト値をもたせる動きの時に使えます
+
+```ruby
+def user_static_num
+  A.num || B::STATIC_NUM
+end
+# A.numは有効な場合はその値、無効な場合はnilを返します。
+```
+
+## rubyのcase
+
+rubyのcaseでは複数の値が設定することが出来るみたい。
+
+配列の展開と組み合わせて使うことが可能
+
+```ruby
+febo = [1, 2, 3, 5, 8, 13]
+perfect_num = [6, 28, 496, 8128]
+case target_num
+when *(febo)
+  puts "#{target_num} is febo num."
+when *(perfect_num)
+  puts "#{target_num} is perfect num."
+else
+  puts "#{target_num} is normal num."
+end
+```
+
+## Railsにおけるエラーの記述方法
+
+https://blog.toshimaru.net/ruby-standard-error/
+
+> タイトルの通り、Rubyで独自例外を定義するときは`Exception`ではなく、`StandardError` を継承するしきたりとなっています。
+
+railsの例だけど、padrinoも同じみたい
+
+## hashでデフォルト値を使う方法
+
+`fetch`というメソッドがある
+
+```
+hash.fetch(:key_not_exist_in_hash, DEFAULT_PARAMATER)
+```
+
+参考 : [ハッシュの安全な扱い方 (デフォルト値とその落とし穴について)](https://qiita.com/QUANON/items/bcd3f0c877796b8be7e1)
