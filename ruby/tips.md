@@ -81,3 +81,21 @@ foo&.hoge # => error
 ```
 
 参考：[Ruby の &. と #try の違い](http://secret-garden.hatenablog.com/entry/2016/09/02/000000)
+
+## `Time.now.between?(hoge, fuga)`
+
+ActiveSuportの機能  
+ruby標準ではないみたいなので注意
+
+https://apidock.com/rails/ActiveSupport/TimeWithZone/between%3F
+
+ちなみに
+
+```
+Time.now.between?(yesterday, nil)
+```
+
+は`ArgumentError`が発生する
+
+
+
