@@ -237,3 +237,12 @@ end
 イメージ的には Model.new は build、Model.create は create の関係である。
 
 参考：[FactoryGirl: build と createの違い](http://tkymtk.hatenablog.com/entry/2013/12/15/214420)
+
+## describe/context/it
+
+[【Ruby on Rails】RSpecのdescribe/context/itの意味を理解した件](https://qiita.com/maeko/items/d7965be4adbeb2490229)
+
+- `descirbe`：テスト対象、クラスやメソッド
+- `context`：条件、丸々がない時とか
+- `it`：検証内容、レスポンスがあるかとか、idが正しいかとか
+
