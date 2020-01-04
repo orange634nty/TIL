@@ -45,3 +45,13 @@ placedItem.file = new File("ファイルへのパス")
 ```
 
 で入れ替え可能
+
+### フォルダの操作
+
+https://befool.co.jp/blog/chainzhang/photoshop-scripting-basic/
+
+`Folder` というクラスがあるのでそれを使うといいみたい
+
+```js
+var folder = new Folder("path/to.dir");
+```
