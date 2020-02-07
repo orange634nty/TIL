@@ -266,3 +266,6 @@ expect(some_class_instance).to have_received(:any)
 みたいにすると、１回以上呼ばれていても `:any` なので問題なしになってしまう…
 
 こういう場合は `and_wrap_original` を使って、呼ばれた引数をためて検証するのがいいはず…！
+
+- https://techracho.bpsinc.jp/hachi8833/2018_04_02/54350
+- https://relishapp.com/rspec/rspec-mocks/v/3-8/docs/configuring-responses/wrapping-the-original-implementation
