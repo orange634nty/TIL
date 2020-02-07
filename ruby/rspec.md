@@ -246,3 +246,23 @@ end
 - `context`：条件、丸々がない時とか
 - `it`：検証内容、レスポンスがあるかとか、idが正しいかとか
 
+## メソッドの呼ばれた回数をチェックする
+
+`once` や `exactly(n)` などを使う
+
+```
+expect(some_class_instance).to have_received(:something).once
+expect(some_class_instance).to have_received(:something).twice
+expect(some_class_instance).to have_received(:something).exactly(3).times
+```
+
+注意が必要なのは 特定の引数が１回渡されるみたいな場合（例：ログよ呼び出してるか）
+
+```
+expect(some_class_instance).to have_received(:something).once
+expect(some_class_instance).to have_received(:any)
+```
+
+みたいにすると、１回以上呼ばれていても `:any` なので問題なしになってしまう…
+
+こういう場合は `and_wrap_original` を使って、呼ばれた引数をためて検証するのがいいはず…！
