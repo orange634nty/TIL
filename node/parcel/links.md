@@ -17,5 +17,5 @@ links about parcel
 # 並列処理
 
 **concurrently**
-https://www.npmjs.com/package/concurrently
+https://www.npmjs.com/package/concurrently  
 参考：http://akabeko.me/blog/2015/08/npm-run-all-and-concurrently/
