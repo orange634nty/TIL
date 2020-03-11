@@ -3,6 +3,8 @@ python tips
 
 ## 線画抽出
 
+これで意外とそれっぽくなる
+
 ```python
 import numpy as np
 import cv2 as c
