@@ -140,4 +140,16 @@ cost 120 : 3 items
 | `sort -n -k 1` | 見やすさの為に個数で降順に並び替えてます<br />参考：https://qiita.com/d-dai/items/b261fc8483d0cdeccb58 | 
 | `awk '{print "cost "$2" : "$1" items"}'` | 見やすさの為にawkで出力を調整しています |
 
+## aliasを無効にして実行する
 
+alias を一時的に無効にするにはコマンドの前に `\` をつける  
+今回は `rm` に `alias rm="rm -i"` を設定しているものとする
+
+```console
+$ ls
+hoge.txt
+$ rm hoge.txt
+remove hoge.txt? n
+$ \rm hoge.txt
+$ ls
+```
