@@ -47,4 +47,12 @@ git merge --no-ff branch-b # <- マージしたいブランチを入れる
 
 `push`するときに`-u`オプションをつけると追跡する。
 
-参考 : [ブランチを指定して git push する方法](
+参考 : [ブランチを指定して git push する方法](http://www-creators.com/archives/5206)
+
+## gitignore を curl を使って生成
+
+https://www.gitignore.io/ を利用する
+
+```console
+$ curl -s https://www.gitignore.io/api/vim,python > .gitignore
+```
