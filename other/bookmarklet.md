@@ -28,3 +28,11 @@ t.selectionStart = t.selectionEnd = s.split('・明')[0].length - 1;
 // 呪文
 false;
 ```
+
+### 超簡易エディタ
+
+ブラウザで書き込めるページを開ける
+
+```js
+data:text/html,<html contenteditable>
+```
