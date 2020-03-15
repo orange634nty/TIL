@@ -90,3 +90,21 @@ this.$refs.topImg.style['margin-top'] = // 変更する値を入れる・この�
 
 - https://parashuto.com/rriver/development/scroll-effect-library-scrollreveal
 
+## モバイルの判定
+
+http://co.bsnws.net/article/186
+https://github.com/kaimallea/isMobile
+
+シンプルで使いやすかった。  
+これから判定系はこれでいいかも
+
+```
+yarn add ismobilejs
+```
+
+```js
+// true 又は falseで結果が返ってきます
+isMobile.phone // スマホからの判別
+isMobile.tablet // タブレットからの判別
+isMobile.any // スマホ、タブレットを含むモバイルからのアクセスの場合
+```
