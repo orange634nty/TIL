@@ -56,3 +56,20 @@ https://www.gitignore.io/ を利用する
 ```console
 $ curl -s https://www.gitignore.io/api/vim,python > .gitignore
 ```
+
+## brew の git を mac で使う
+
+https://qiita.com/bakepotate/items/dc457a0046413ce1f965 を参考
+
+```
+brew install git
+vim ~/.bashrc
+```
+
+以下を追加
+
+```
+export PATH=/usr/local/git/bin:$PATH
+```
+
+
