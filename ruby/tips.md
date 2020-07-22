@@ -186,3 +186,38 @@ hash.fetch(:key_not_exist_in_hash, DEFAULT_PARAMATER)
 ```
 
 参考 : [ハッシュの安全な扱い方 (デフォルト値とその落とし穴について)](https://qiita.com/QUANON/items/bcd3f0c877796b8be7e1)
+
+## ruby での配列の引数の扱い
+
+参考 : [【Ruby】メソッドの引数は値渡し？参照渡し？](https://qiita.com/haru_tp/items/39c89c25a39d15b41f4e)
+
+ruby は参照の値渡しをしているので、arrayを渡したときには一見参照渡しのように見えます
+
+`hoge.object_id` をみて同一か判定します。
+なので
+
+```ruby
+arr = []
+add_item(arr)
+pust arr # => ["hoge"]
+
+def add_item(list)
+  list << "hoge"
+end
+```
+
+になります。
+逆に
+
+```ruby
+arr = []
+add_item(arr)
+pust arr # => []
+
+def add_item(list)
+  list = ["hoge"]
+end
+```
+
+のようにするとobject_idが変わるので変わる
+ややこしい
