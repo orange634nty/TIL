@@ -69,3 +69,14 @@ filename.split(".").slice(0, -1).join(".")
 
 参考 : [How to trim a file extension from a String in JavaScript?](https://stackoverflow.com/questions/4250364/how-to-trim-a-file-extension-from-a-string-in-javascript)
 
+## 正規表現を使ったマッチング
+
+`RegExp` を使えばいい
+
+```js
+const regexp = new RegExp(`${name}-article.md`, "g")
+const match_list = strBase.match(regexp)
+```
+
+参考 : [正規表現を使ったマッチングに変数を使用する](https://qiita.com/ykob/items/6e4d0b07bed57881a2bd)
+
