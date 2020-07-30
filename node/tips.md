@@ -40,3 +40,21 @@ node index.js hoge foo
 ```
 
 のようにやればいい
+
+## node でシェルコマンドを実行する
+
+`child_process` を使う  
+自分の場合は扱いやすさてきに `execSync` を使うことが多い  
+コマンド実行後の標準出力を返す
+
+```js
+const { execSync } = require('child_process')
+
+const stdout = execSync('ls')
+console.log(`stdout: ${stdout.toString()}`)
+```
+
+ファイルサイズが大きい場合は `spawn` を使った方がいい
+
+参考: [シェルコマンドを実行する方法(child_process)](https://www.wakuwakubank.com/posts/728-nodejs-child-process/)
+
