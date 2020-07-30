@@ -46,3 +46,5 @@ run-s watch viewer
 run-p watch viewer
 ```
 
+その他ツールはこちら参照 : [npm-scripts で使える便利モジュールたち](https://qiita.com/mysticatea/items/12bb6579b9155fd74586)
+
