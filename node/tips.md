@@ -58,3 +58,14 @@ console.log(`stdout: ${stdout.toString()}`)
 
 参考: [シェルコマンドを実行する方法(child_process)](https://www.wakuwakubank.com/posts/728-nodejs-child-process/)
 
+## 拡張子を省いたファイル名を取得する方法
+
+めちゃめちゃ単純に `.` で split して後ろを取って、また繋げるだけ  
+力技の方がシンプルにうまくいく場合が多い
+
+```js
+filename.split(".").slice(0, -1).join(".")
+```
+
+参考 : [How to trim a file extension from a String in JavaScript?](https://stackoverflow.com/questions/4250364/how-to-trim-a-file-extension-from-a-string-in-javascript)
+
