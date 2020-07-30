@@ -80,3 +80,21 @@ const match_list = strBase.match(regexp)
 
 参考 : [正規表現を使ったマッチングに変数を使用する](https://qiita.com/ykob/items/6e4d0b07bed57881a2bd)
 
+## ファイルを扱う場合
+
+`fs` を使うことになる
+
+個人的には `readFileSync` と `writeFileSync` を積極的に使っていきたい。
+
+参考 : [node.jsでファイルの入出力操作](https://qiita.com/shirokuman/items/509b159bf4b8dd1c41ef)
+
+## 現在のディレクトリ名を取得する方法
+
+Node.js標準でグローバル変数の `__dirname` から  
+ディレクトリ名のみが欲しい場合は `path` モジュールを使うのがいい
+
+```js
+console.log(path.basename(__dirname))
+```
+
+参考 : [JavaScript/Node.jsで現在のディレクトリ名のみを取得する](https://qiita.com/Ancient_Scapes/items/6751461d8547200b6715)
