@@ -24,7 +24,7 @@ CC自動化作戦は逆引き、つまりやりたいことから検索出来て
 
 http://chalcedony.hatenablog.com/entry/20140725/1406299387
 
-```javascript
+```js
 var fileobj = new File("ファイルパス");
 ```
 
@@ -32,7 +32,7 @@ var fileobj = new File("ファイルパス");
 
 ### 画像の置き換え
 
-CC自動化作戦には画像ファイルの扱いがなかったのでそうやるか悩んだ
+CC自動化作戦には画像ファイルの扱いがなかったのでどうやるか悩んだ
 
 http://chalcedony.hatenablog.com/entry/20090123/1232680836
 
@@ -40,8 +40,8 @@ http://chalcedony.hatenablog.com/entry/20090123/1232680836
 また、パスの入れ変えは
 
 
-```javascript
-placedItem.file = new File("ファイルへのパス")
+```js
+placedItem.file = new File("入れ替え先のファイルへのパス")
 ```
 
 で入れ替え可能
@@ -53,5 +53,5 @@ https://befool.co.jp/blog/chainzhang/photoshop-scripting-basic/
 `Folder` というクラスがあるのでそれを使うといいみたい
 
 ```js
-var folder = new Folder("path/to.dir");
+var folder = new Folder("path/to/dir");
 ```
