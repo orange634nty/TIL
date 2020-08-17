@@ -9,7 +9,7 @@ VideoPlayer tips
 
 参考：https://stackoverflow.com/questions/44696030/detect-when-videoplayer-has-finished-playing
 
-ただ、このまま実装すると動画再生枚にコルーチンが走ってしまう場合があるので、しばらく待ってから再生判定を行う方がいい
+ただ、このまま実装すると動画再生前にコルーチンが走ってしまう場合があるので、しばらく待ってから再生判定を行う方がいい
 
 ```csharp
     private void StartVideo(int videoId)
