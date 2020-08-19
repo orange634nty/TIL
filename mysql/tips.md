@@ -23,3 +23,9 @@ mysql --help | grep my.cnf
 で確認可能
 
 https://qiita.com/is0me/items/12629e3602ebb27c26a4
+
+## リレーログ
+
+https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0053
+
+スレーブのみの生成されるログ、マスターからのバイナリログの情報を一旦書き込むリレーログファイル
