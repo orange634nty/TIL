@@ -19,3 +19,8 @@ redisはやり方はこの通り
 簡単な説明は以下を参照
 
 [Macのlaunchctlでサービスの自動起動をさせたくない時のためのメモ](https://qiita.com/ono_matope/items/e437a35c3921ad35d109)
+
+## brew cask
+
+app をインストールできる  
+普通に brew をインストールしたら入ってる
