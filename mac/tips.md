@@ -24,3 +24,16 @@ redisはやり方はこの通り
 
 app をインストールできる  
 普通に brew をインストールしたら入ってる
+
+## macでmovからmp4へ変換する 
+
+アプリとかあんまり入れなたくないので方法が探したけど、`ffmpeg`のが一番良さそう。  
+`ffmpeg`はgifの変換出来るみたいなので色々使えそう。  
+ちなみに、この方法は特に mac 限定ではない。
+
+```
+$ ffmpeg -i movie.mov  movie.mp4
+```
+# 参考
+- [twitterに動画が投稿できない場合の対処法 〜 フリーソフトを使わずに動画を .mp4に変換する方法、.mov形式は使えない](https://www.what-a-day.net/entry/movie-convert-mp4)
+- [macでffmpegを導入してmovファイルをgifファイルへ変換するところまで](https://qiita.com/Ryosuke-Hujisawa/items/6a1c47d31ac299dc1c46)
