@@ -221,3 +221,11 @@ end
 
 のようにするとobject_idが変わるので変わる
 ややこしい
+
+## obj を hash にする
+
+`index_by` を使うと簡単にできる  
+いままで `.map { |val| [val[:hoge], v] }.to_h` みたいにしてた
+
+参考: https://qiita.com/QUANON/items/c3582a55949d1e6a1e84
+
