@@ -153,3 +153,13 @@ remove hoge.txt? n
 $ \rm hoge.txt
 $ ls
 ```
+
+## 別ファイルのshellを読み込んで実行する（例えばbash_profileからbashrcを読み込む）
+
+```
+if [ -f ~/.bashrc ] ; then
+    . ~/.bashrc
+fi
+```
+
+のようにしたらいい
