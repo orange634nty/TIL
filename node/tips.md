@@ -98,3 +98,9 @@ console.log(path.basename(__dirname))
 ```
 
 参考 : [JavaScript/Node.jsで現在のディレクトリ名のみを取得する](https://qiita.com/Ancient_Scapes/items/6751461d8547200b6715)
+
+## pm2 を使って hubot を起動させる際の注意
+
+参考 : [pm2でhubotを起動するとき - koukiblo](https://kamihikouki.hatenablog.com/entry/2017/03/11/161852)
+
+参考先に書かれているように、`.sh` の拡張子が必要
