@@ -64,3 +64,9 @@ http://tsubakit1.hateblo.jp/entry/2014/12/11/223427
 https://www.stmn.tech/entry/2018/06/17/152357
 
 RaycastTarget を有効・無効に切り替えることで利用可能
+
+## uGUIのScrollView
+
+https://q7z.hatenablog.com/entry/2016/12/03/000027
+
+上の記事は色々細かいところも書いてるので役に立つ
