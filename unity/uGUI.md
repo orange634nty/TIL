@@ -52,3 +52,15 @@ prefab.transform.SetParent(canvas.transform, false);
 ```
 
 `false` にしないとダメ
+
+## アスペクト比を固定にする
+
+http://tsubakit1.hateblo.jp/entry/2014/12/11/223427
+
+カメラのアス比はこんな感じで固定できるらしい: https://meideru.com/archives/556
+
+## uGUIでPanelとかのタッチ判定を後ろに流す
+
+https://www.stmn.tech/entry/2018/06/17/152357
+
+RaycastTarget を有効・無効に切り替えることで利用可能
