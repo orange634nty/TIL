@@ -77,3 +77,7 @@ background-size: auto 100vh;
 ## 画像をぷるぷるさせる
 
 参考 : https://q-az.net/buruburu-hurueru-css/
+
+## シンプルな読み込みアニメーション
+
+参考 : http://var.blog.jp/archives/59628323.html
