@@ -39,3 +39,6 @@ linefile使う
 
 https://blog.adachin.me/archives/5475
 
+## ansibleでのcomposerについて
+
+デフォルトでは --no-dev で require-dev に入っているものは省かれるので、no_dev: no（否定を否定）にする必要がある。
