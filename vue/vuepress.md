@@ -45,3 +45,76 @@ https://vuepress.vuejs.org/guide/custom-themes.html#site-and-page-metadata
 
 カスタムプレビュー：https://www.netlifycms.org/docs/customization/
 プレビューの確認もできるみたい：https://www.netlifycms.org/docs/deploy-preview-links/
+
+---
+
+## 試した時のログ
+
+ちょっと使う予定があるので試してみました。
+
+とりあえず公式をやってみる。
+https://vuepress.vuejs.org/guide/getting-started.html
+
+今回はプロジェクトに入れる方法にします。（後々のビルドのことを考えて）
+
+```console
+$ yarn init
+// 色々入力
+$ yarn add -D vuepress
+$ mkdir docs
+$ echo '# orange634 ota blog!' > docs/README.md
+$ vi package.json
+//  "scripts": {
+//    "docs:dev": "vuepress dev docs",
+//    "docs:build": "vuepress build docs"
+//  },
+$ yarn docs:dev
+```
+
+これで開発環境は立ち上がったみたいです。
+`http://localhost:8080`にアクセスします。
+
+![](img/ss1.png)
+
+それぽい。
+
+ビルドする際は以下を実行します。
+
+```console
+$ yarn docs:build
+```
+
+すると、`docs/.vuepress/dist`に出力されます。
+
+```console
+$ ls docs/.vuepress/dist/
+404.html	assets/		index.html
+```
+
+一旦`.gitignore`を追加して、gitにコミット。
+`dist`以下のファイルは含めないで、デプロイ時にビルドする方法にしようと思う。
+
+```.gitignore
+.DS_Store
+node_modules
+*.log
+.temp
+TODOs.md
+vuepress
+dist
+```
+
+# configをいじってみる
+
+次にconfig周りをいじりたいと思います。
+https://vuepress.vuejs.org/guide/basic-config.html#config-file
+
+`docs/.vuepress/config.js`にファイルを作ります。
+
+```javascript:config.js
+module.exports = {
+  title: 'orange634 ota blog',
+  description: 'my otaku blog made by vue press.'
+}
+```
+
