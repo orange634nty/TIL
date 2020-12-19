@@ -108,3 +108,18 @@ isMobile.phone // スマホからの判別
 isMobile.tablet // タブレットからの判別
 isMobile.any // スマホ、タブレットを含むモバイルからのアクセスの場合
 ```
+
+## vueで要素の位置を取得する
+
+「`$refs` で直接要素を取得」と同じ方法で要素を取得するだけ
+
+```html
+<div ref="myDiv">
+</div>
+```
+
+```javascript
+var rect = this.$refs.myDiv.getBoundingClientRect() ;
+var top =  rect.top;
+var left = rect.left;
+```
