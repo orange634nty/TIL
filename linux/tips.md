@@ -17,3 +17,9 @@ readlink -f index.html
 ```
 
 ただしmacでは使えない…
+
+## freeの見方
+
+https://www.khstasaba.com/?p=735
+
+buffers/cache はシステムから割り当てられる領域なので見るときに注意
