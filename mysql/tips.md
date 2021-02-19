@@ -37,3 +37,17 @@ https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0053
 ```
 mysqldump -u hoge -p -d -n > shema.dump
 ```
+
+## ２つのテーブルどちらにもあるIDを抽出
+
+例えば２つのテーブルが合ってどちらも `user_id` を持つ時、どちらのテーブルにある `user_id` を抽出する方法は
+
+```
+SELECT auther.user_id
+FROM auther
+LEFT OUTER JOIN reader
+ON auther.user_id = reader.user_id
+WHERE reader.user_id IS NOT NULL
+```
+
+で求められる
