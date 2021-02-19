@@ -29,3 +29,11 @@ https://qiita.com/is0me/items/12629e3602ebb27c26a4
 https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0053
 
 スレーブのみの生成されるログ、マスターからのバイナリログの情報を一旦書き込むリレーログファイル
+
+## schema のダンプのみ取る
+
+`-n` オプションでスキーマのみ取る
+
+```
+mysqldump -u hoge -p -d -n > shema.dump
+```
