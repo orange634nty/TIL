@@ -7,6 +7,9 @@ Redis が必要なのでちょっと面倒
 
 https://github.com/resque/resque
 
+apiが気になったらこれ見たらだいたい分かる
+https://www.rubydoc.info/gems/resque/toplevel
+
 ## tips
 
 ```ruby
