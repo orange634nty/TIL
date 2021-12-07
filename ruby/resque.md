@@ -15,4 +15,14 @@ Resque.queues
 
 # 現在積んでるキューを確認する
 Resque.peek("job_name")
+
+# workerを確認する
+Resque.workers
+
+# 基本的な情報を確認する
+Resque.info
+
+# redis のデータを直接見る
+# 格納されてるデータはlist型なのでlist型のものは全て扱える
+Resque.redis.llen("queue:<queue name>")
 ```
