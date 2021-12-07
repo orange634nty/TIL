@@ -8,6 +8,7 @@ Redis が必要なのでちょっと面倒
 https://github.com/resque/resque
 
 apiが気になったらこれ見たらだいたい分かる
+
 https://www.rubydoc.info/gems/resque/toplevel
 
 ## tips
@@ -17,6 +18,7 @@ https://www.rubydoc.info/gems/resque/toplevel
 Resque.queues
 
 # 現在積んでるキューを確認する
+# 引数指定しないと一番最初の queue のみを返す
 Resque.peek("job_name")
 
 # workerを確認する
@@ -26,6 +28,6 @@ Resque.workers
 Resque.info
 
 # redis のデータを直接見る
-# 格納されてるデータはlist型なのでlist型のものは全て扱える
-Resque.redis.llen("queue:<queue name>")
+# 格納されてるデータは list 型なので list 型のものは全て扱える
+Resque.redis.llen("queue:<job_name>")
 ```
