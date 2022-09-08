@@ -1,6 +1,10 @@
 Rubocop
 ---
 
+Rubocop の実装を見るのが一番わかりやすいので、困ったら見よう！
+
+https://github.com/rubocop/rubocop/tree/00e7ac78fb83383ef537e9e08ecf2301a1427578/lib/rubocop/cop
+
 ## カスタムルールの追加
 
 - https://moneyforward.com/engineers_blog/2021/09/02/rubocop/
