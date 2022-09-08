@@ -49,6 +49,29 @@ end
 
 みたいになる
 
+### AutoCorrect
+
+```ruby
+extend AutoCorrector
+```
+
+を追加したら使えるようになる
+
+```ruby
+class Hoge < RuboCop::Cop::Base
+  MSG = "dont use Hoge.foo instead of Hoge.boo"
+   def_node_matcher :use_hoge_boo?, '(send (const ... :Hoge) :boo)'
+
+  def on_send(node)
+    return unless use_hoge_boo?(node)
+    add_offense(node) { |correct| corrector.replace(node.loc.selector, 'foo') }  # <= ここ！
+  end
+end
+```
+
+のようにブロックに定義できる
+`replace` の第一引数には修正したい部分の `Parser::Source::Range`, `Comment` `RuboCop::AST::Node` を渡せばいい
+
 ### その他メモ
 
 時間がある時にちゃんと調べるけど今は適当にメモしておく  
