@@ -63,6 +63,7 @@ extend AutoCorrector
 
 ```ruby
 class Hoge < RuboCop::Cop::Base
+  extend AutoCorrector
   MSG = "dont use Hoge.foo instead of Hoge.boo"
    def_node_matcher :use_hoge_boo?, '(send (const ... :Hoge) :boo)'
 
