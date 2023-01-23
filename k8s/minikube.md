@@ -4,6 +4,8 @@ minikube
 ローカルでk8s用の環境  
 コマンド一発で作成・削除ができるので検証としても使える
 
+[minikube 公式](https://minikube.sigs.k8s.io/docs/)
+
 以下のサイトを参考にしました。
 
 [Docker Desktop の代わりに Minikube を使ってみる](https://blog.1q77.com/2021/09/replace-docker-desktop-with-minikube/)
