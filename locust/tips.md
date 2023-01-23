@@ -20,3 +20,7 @@ locustのスクリプトと関連コード類は config map を作成してそ�
 [LocustをKubernetesに構築して大規模な負荷テストをする](https://zenn.dev/ry/articles/97a5c50b1ddf16)
 
 関連ファイルのディレクトリがlibと決まってる感じになっているので独自にコピって改造して方がいいかも
+
+manifestを直で書きたい場合は以下のほうが簡素でわかりやすいと思う
+
+[locust を kubernetes にデプロイして負荷テストを実施してみる](https://zenn.dev/empenguin/articles/eda7535aeb0977)
