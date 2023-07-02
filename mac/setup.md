@@ -21,6 +21,15 @@ workflowを作ったり、チームで共有できるみたいなので面白そ
 これは以前から引き続き使用
 jetbrains系のIDEも使ってたけど、エンジニアではなくなるので解約して、vscodeを主軸に移行
 
+### cot editor
+
+軽量なエディタ
+以下の alias を入れている
+
+```
+cot='open $1 -a "/Applications/CotEditor.app"'
+```
+
 ---
 
 引き続き入れたら更新する
