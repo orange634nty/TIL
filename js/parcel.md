@@ -1,20 +1,22 @@
-links about parcel
+parcel
 ---
 
-# Electron
+# LINKS
+
+## Electron
 
 - http://shibe97.hatenablog.com/entry/2017/02/17/090000
 - https://h3poteto.hatenablog.com/entry/2018/04/14/234353
 
-# parcel
+## parcel
 
 - http://simoothie-cafe.hatenablog.com/entry/2018/05/06/123752
 
-# cordova
+## cordova
 
 - https://github.com/Shyam-Chen/Mobile-Starter-Kit
 
-# 並列処理
+## 並列処理
 
 **concurrently**
 https://www.npmjs.com/package/concurrently  

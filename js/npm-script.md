@@ -19,7 +19,7 @@ opener http://localhost:3000/
 
 ## 監視
 
-https://github.com/kimmobrunfeldt/chokidar-cli
+https://github.com/open-cli-tools/chokidar-cli
 
 babel 等はオプションで指定できるが、そういったものがない場合は cholidar-cli をつかうといい
 
